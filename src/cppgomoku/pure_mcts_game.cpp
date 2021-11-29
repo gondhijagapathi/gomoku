@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
     if (!define_player(player1, player1_type, Board::kPlayerBlack)) return 0;
     if (!define_player(player2, player2_type, Board::kPlayerWhite)) return 0;
 
-    Board b(9,9,5);
+    Board b(15,15,5);
     GameServer gs(&b, player1, player2, false);
     gs.startGame();
 

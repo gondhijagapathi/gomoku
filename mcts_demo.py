@@ -5,7 +5,7 @@ from pygomoku.Board import Board
 from pygomoku.Player import HumanPlayer, PureMCTSPlayer
 from pygomoku.GameServer import GameServer
 
-board = Board(width=9, height=9)
+board = Board(width=15, height=15)
 player1 = PureMCTSPlayer(Board.kPlayerBlack, name="AI 1",weight_c=5, compute_budget=20000)
 # player1 = HumanPlayer(Board.kPlayerBlack, name="player 1")
 

@@ -23,7 +23,7 @@ namespace gomoku
             printf("\n");
         }
 
-        board->printBoard();
+        board->display();
     }
 
     int GameServer::startGame() {

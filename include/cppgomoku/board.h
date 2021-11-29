@@ -15,10 +15,10 @@ namespace gomoku {
     public:
         const static int kPlayerWhite = 0;
         const static int kPlayerBlack = 1;
-        const static int kPlayerEmpty = -1;
+        const static int kPlayerEmpty = 2;
         const static int kOutOfBoard = -2;
-        const static char kBlackStone = '@';
-        const static char kWhiteStone = 'O';
+        const static char kBlackStone = 'B';
+        const static char kWhiteStone = 'W';
         const static char kEmptyStone = '+';
 
     private:
@@ -47,10 +47,10 @@ namespace gomoku {
         bool play(int move);
         bool undo();
         std::vector<State> currentState();
-        int fastGetWinner();
-        int getWinner();
+        int checkBoardStatus();
+        //int getWinner();
         bool gameEnd(int &color);
-        void printBoard();
+        void display();
         int currentPlayerColor();
         Location LastMoveLocation();
         int lastMove();

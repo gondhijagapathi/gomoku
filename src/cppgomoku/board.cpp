@@ -171,7 +171,8 @@ namespace gomoku
         return false;
     }
 
-    int Board::fastGetWinner() {
+    //Returns the winner.
+    int Board::checkBoardStatus() {
         /** 
          * If the game is plain sailing, i.e. the only operation is play stone and remove stone from board,
          * then the last move will end the game, and only the last move can determine the winner.
@@ -189,7 +190,7 @@ namespace gomoku
         return kPlayerEmpty;
     }
 
-    int Board::getWinner() {
+    /*int Board::getWinner() {
         if (mMoved.size() < 2 * mNumberToWin - 1) return kPlayerEmpty;
 
         int num_moved = static_cast<int>(mMoved.size());
@@ -201,10 +202,10 @@ namespace gomoku
         }
 
         return kPlayerEmpty;
-    }
+    }*/
 
     bool Board::gameEnd(int &color) {
-        color = fastGetWinner();
+        color = checkBoardStatus();
         if (color != kPlayerEmpty || mAvailables.empty()) {
             return true;
         }
@@ -213,7 +214,8 @@ namespace gomoku
         }
     }
 
-    void Board::printBoard() {
+    //Display the current status of the board ( Prints Board )
+    void Board::display() {
         printf("Current turn: [%c]\n", stone(mCurrentPlayer));
         Location last_location;
         if (mLastMove != kPlayerEmpty) 

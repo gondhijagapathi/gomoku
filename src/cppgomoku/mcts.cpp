@@ -148,7 +148,8 @@ namespace gomoku
         curr_node->backPropagation(-bp_value);
     }
 
-    int PureMonteCarloSearchTree::getMove(Board &s, float exploration_level) {
+    //Search for the best move
+    int PureMonteCarloSearchTree::search(Board &s, float exploration_level) {
         // the first move is at the center of board
         if (s.isEmpty()) return (s.getHeight() * s.getWidth()) / 2;
 

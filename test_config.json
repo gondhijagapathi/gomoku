@@ -1,6 +1,6 @@
 {
-    "board_width": 9,
-    "board_height": 9,
+    "board_width": 15,
+    "board_height": 15,
     "batch_size": 128,
     "base_learning_rate": 2e-3,
     "best_model_path": "./checkpoint/test_model/best_model.ckpt",

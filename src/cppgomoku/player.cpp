@@ -55,10 +55,10 @@ namespace gomoku
         std::string color_info;
         switch (color) {
             case Board::kPlayerBlack:
-                color_info = "Black[@]\n";
+                color_info = "Black[B]\n";
                 break;
             case Board::kPlayerWhite:
-                color_info = "White[O]\n";
+                color_info = "White[W]\n";
                 break;
             default:
                 color_info = "None[+]\n";
@@ -89,6 +89,7 @@ namespace gomoku
         this->silent = silent;
     }
 
+    
     int PureMCTSPlayer::getAction(Board &b) {
         // check color
         if (b.currentPlayerColor() != color) {
@@ -100,9 +101,9 @@ namespace gomoku
         // PureMCTSPlayer to play with others, not itself.
         printf("Update with move\n");
         search_tree.updateWithMove(b.lastMove());
-        printf("get move\n");
+        printf("Search for the best position and get the position\n");
         // get next move
-        int next_move = search_tree.getMove(b);
+        int next_move = search_tree.search(b);
         search_tree.updateWithMove(next_move);
         return next_move;
     }
@@ -111,10 +112,10 @@ namespace gomoku
         std::string color_info;
         switch (color) {
             case Board::kPlayerBlack:
-                color_info = "Black[@]\n";
+                color_info = "Black[B]\n";
                 break;
             case Board::kPlayerWhite:
-                color_info = "White[O]\n";
+                color_info = "White[W]\n";
                 break;
             default:
                 color_info = "None[+]\n";
