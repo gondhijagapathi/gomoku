@@ -11,7 +11,7 @@ bool define_player(Player *&p, char type, int color) {
                 p = new HumanPlayer(color, "Human Player"); 
                 break;
             case 'c':
-                p = new PureMCTSPlayer(color, "Pure MCTS player", 10.0, 80000); 
+                p = new PureMCTSPlayer(color, "Computer(MCTS) player", 10.0, 80000); 
                 break;
             default:
                 printf("Wrong type parameter for player, expect \'h\' or \'c\'\n");
