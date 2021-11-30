@@ -8,3 +8,10 @@ Below is an example where the game is played by two computer players.
 ```
 ./pure_mcts_game c c
 ```
+
+If you are on a linux machine, replace line number 2 of Makefile with 
+
+```
+CXX := g++
+
+```
