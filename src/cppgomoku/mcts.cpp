@@ -3,6 +3,7 @@
 
 namespace gomoku
 {
+    namespace pujitha{
     MCTSTreeNode::MCTSTreeNode(MCTSTreeNode* parent, float prior_prob) {
         this->parent = parent; 
         visit_times = 0;
@@ -210,4 +211,5 @@ namespace gomoku
             root = new MCTSTreeNode(nullptr, 1.0);
         }
     }
+}
 } // gomoku

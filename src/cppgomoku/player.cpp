@@ -83,7 +83,7 @@ namespace gomoku
     PureMCTSPlayer::PureMCTSPlayer(int color, std::string name, float weight_c, 
                                    int compute_budget, bool silent)
     :Player(color, name), 
-    search_tree(PureMonteCarloSearchTree(weight_c, compute_budget, compute_budget/100, 
+    pujitha::search_tree(PureMonteCarloSearchTree(weight_c, compute_budget, compute_budget/100, 
                                          silent, 1000, MCTS_Expand_policy_fn,
                                          rollout_policy_fn)) {
         this->silent = silent;
@@ -124,7 +124,6 @@ namespace gomoku
         player_info += name;
         player_info += "\nColor: ";
         player_info += color_info;
-        player_info += "Compute Budget: ";
         player_info += std::to_string(search_tree.getComputeBudget());
         player_info += "\n\n";
         return player_info;
