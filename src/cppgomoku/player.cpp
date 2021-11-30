@@ -26,7 +26,7 @@ namespace pujitha
     int HumanPlayer::getActionFromStdin(Board &b) {
         while (true) {
             Location next_location;
-            printf("Your movement[index start from 0]\n(format: vertical_index horizontal_index): ");
+            printf("Your movement[index start from 0]\n(format: horizontal_index vertical_index): ");
             scanf("%d %d", &next_location.h_index, &next_location.w_index);
             printf("\n");
 
