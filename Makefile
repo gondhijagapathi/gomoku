@@ -1,5 +1,5 @@
 # compile params
-CXX := g++
+CXX := clang++ -std=c++11 -stdlib=libc++
 
 PROJECT_NAME := cppgomoku
 
