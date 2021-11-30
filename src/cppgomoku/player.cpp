@@ -99,7 +99,6 @@ namespace gomoku
 
         // update the MCST with last move, because we only use 
         // PureMCTSPlayer to play with others, not itself.
-        printf("Update with move\n");
         search_tree.updateWithMove(b.lastMove());
         printf("Search for the best position and get the position\n");
         // get next move
