@@ -37,9 +37,7 @@ namespace gomoku
         int next_move, winner_color;
         while (true) {
             Player *current_player = color_to_player[board->currentPlayerColor()];
-            printf("Before get action\n");
             next_move = current_player->getAction(*board);
-            printf("After get action\n");
             if (!board->isValidMove(next_move)) {
                 printf("Invalid move %d\n", next_move);
                 throw std::runtime_error("Invalid move!");
