@@ -13,4 +13,4 @@ Below is an example where the game is played by two computer players.
 ./pure_mcts_game c c
 ```
 
-The computer player’s best move is picked up using the Monte Carlo Tree Search algorithm where as the human player needs to provide his move using the [vertical_index horizontal_index] format.
+The computer player’s best move is picked up using the Monte Carlo Tree Search algorithm where as the human player needs to provide his move using the [horizontal_index vertical_index] format.
