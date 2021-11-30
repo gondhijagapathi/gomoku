@@ -50,7 +50,9 @@ namespace gomoku
         virtual ~MonteCarloSearchTreeBase() {}
         virtual void playout(Board &s) = 0;
         virtual void reset() = 0;
-        virtual int search(Board &s, float exploration_level=1) = 0;
+        namespace pujitha{
+            virtual int search(Board &s, float exploration_level=1) = 0;
+        }
         virtual void updateWithMove(int last_move) = 0;
         virtual MCTSTreeNode * getRoot() = 0;
     };

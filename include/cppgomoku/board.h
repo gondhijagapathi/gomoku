@@ -19,7 +19,7 @@ namespace gomoku {
         const static int kOutOfBoard = -2;
         const static char kBlackStone = 'B';
         const static char kWhiteStone = 'W';
-        const static char kEmptyStone = '+';
+        const static char kEmptyStone = '.';
 
     private:
         int mWidth;

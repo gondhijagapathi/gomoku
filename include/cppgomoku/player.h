@@ -32,7 +32,7 @@ namespace gomoku
     private:
         HumanPlayerInputMode input_mode;
     public:
-        HumanPlayer(int color, std::string name="John Doe(Human)", char input_mode='S');
+        HumanPlayer(int color, std::string name="Pujitha Nimmagadda", char input_mode='S');
         ~HumanPlayer(){}
         int getActionFromGUI(Board &board);
         int getActionFromStdin(Board &board);
@@ -45,7 +45,7 @@ namespace gomoku
         bool silent;
         PureMonteCarloSearchTree search_tree;
     public:
-        PureMCTSPlayer(int color, std::string name="Pure MCTS player", float weight_c=10, 
+        PureMCTSPlayer(int color, std::string name="Computer(MCTS) Player", float weight_c=10, 
                        int compute_budget=1E4, bool silent=false);
         ~PureMCTSPlayer(){}
         void reset() {search_tree.reset();}
