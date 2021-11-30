@@ -7,7 +7,7 @@
 #include "cppgomoku/mcts.h"
 
 
-namespace gomoku
+namespace pujitha
 {
     std::vector<MoveProbPair> rollout_policy_fn(Board &board); 
     std::vector<MoveProbPair> MCTS_Expand_policy_fn(Board &board);

@@ -4,7 +4,7 @@
 #include <vector>
 #include <utility>
 
-namespace gomoku
+namespace pujitha
 { 
     struct Location {
         int h_index;

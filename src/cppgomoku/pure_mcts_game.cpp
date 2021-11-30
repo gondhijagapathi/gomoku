@@ -3,7 +3,7 @@
 #include "cppgomoku/board.h"
 #include "cppgomoku/game_server.h"
 
-using namespace gomoku;
+using namespace pujitha;
 
 bool define_player(Player *&p, char type, int color) {
     switch (type) {

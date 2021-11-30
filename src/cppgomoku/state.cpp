@@ -1,5 +1,5 @@
 #include "cppgomoku/state.h"
-namespace gomoku
+namespace pujitha
 {
     State::State(int h, int w, int color) {
         height = h; width = w;

@@ -1,7 +1,7 @@
 #include "cppgomoku/player.h"
 
 
-namespace gomoku
+namespace pujitha
 {
     HumanPlayer::HumanPlayer(int color, std::string name, 
                              char input_mode):Player(color, name)
@@ -83,7 +83,7 @@ namespace gomoku
     PureMCTSPlayer::PureMCTSPlayer(int color, std::string name, float weight_c, 
                                    int compute_budget, bool silent)
     :Player(color, name), 
-    pujitha::search_tree(PureMonteCarloSearchTree(weight_c, compute_budget, compute_budget/100, 
+    search_tree(PureMonteCarloSearchTree(weight_c, compute_budget, compute_budget/100, 
                                          silent, 1000, MCTS_Expand_policy_fn,
                                          rollout_policy_fn)) {
         this->silent = silent;

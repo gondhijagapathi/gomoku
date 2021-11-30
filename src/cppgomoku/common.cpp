@@ -1,7 +1,7 @@
 #include "cppgomoku/common.h"
 
 
-namespace gomoku
+namespace pujitha
 {
     MoveProbPair::MoveProbPair(int move, float prob) {
         this->move = move;

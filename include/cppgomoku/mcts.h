@@ -11,7 +11,7 @@
 #include "cppgomoku/board.h"
 #include "cppgomoku/policy_functions.h"
 
-namespace gomoku
+namespace pujitha
 {
     typedef decltype(MCTS_Expand_policy_fn) expandFunc;
     typedef decltype(rollout_policy_fn) rolloutFunc;
@@ -50,9 +50,7 @@ namespace gomoku
         virtual ~MonteCarloSearchTreeBase() {}
         virtual void playout(Board &s) = 0;
         virtual void reset() = 0;
-        namespace pujitha{
         virtual int search(Board &s, float exploration_level=1) = 0;
-        }
         virtual void updateWithMove(int last_move) = 0;
         virtual MCTSTreeNode * getRoot() = 0;
     };
@@ -78,9 +76,7 @@ namespace gomoku
         void reset();
         float evaluateRollout(Board &board, int limit);
         void playout(Board &s);
-        namespace pujitha {
-            int search(Board &s, float exploration_level=1);
-        }
+        int search(Board &s, float exploration_level=1);
         void updateWithMove(int last_move);
         MCTSTreeNode * getRoot() {return root;}
         void setSilent() {silent = true;}

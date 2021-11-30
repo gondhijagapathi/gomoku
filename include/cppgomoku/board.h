@@ -9,7 +9,7 @@
 // #include "cppgomoku/common.h"
 #include "cppgomoku/common.h"
 #include "cppgomoku/state.h"
-namespace gomoku {
+namespace pujitha {
     class Board
     {
     public:

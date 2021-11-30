@@ -1,6 +1,6 @@
 #include "cppgomoku/board.h"
 
-namespace gomoku
+namespace pujitha
 {
     int Board::opponentColor(int color) {
         return (color == kPlayerBlack) ? kPlayerWhite : kPlayerBlack;

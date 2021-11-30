@@ -1,7 +1,7 @@
 #include "cppgomoku/game_server.h"
 
 
-namespace gomoku
+namespace pujitha
 {
     GameServer::GameServer(Board *b, Player *p1, Player *p2, bool silent) {
         board = b;

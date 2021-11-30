@@ -1,7 +1,7 @@
 #include "cppgomoku/policy_functions.h"
 
 
-namespace gomoku
+namespace pujitha
 {
     std::vector<MoveProbPair> rollout_policy_fn(Board &board) {
         int len = static_cast<int>(board.getAvailables().size());

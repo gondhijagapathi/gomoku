@@ -10,7 +10,7 @@
 
 #define DEBUG 0
 
-namespace gomoku
+namespace pujitha
 {
     // common datatypes
     struct MoveProbPair {

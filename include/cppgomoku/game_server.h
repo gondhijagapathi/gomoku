@@ -5,7 +5,7 @@
 #include "cppgomoku/player.h"
 
 
-namespace gomoku
+namespace pujitha
 {
     class GameServer {
     private:
