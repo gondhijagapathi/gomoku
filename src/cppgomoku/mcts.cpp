@@ -3,7 +3,6 @@
 
 namespace gomoku
 {
-    namespace pujitha{
     MCTSTreeNode::MCTSTreeNode(MCTSTreeNode* parent, float prior_prob) {
         this->parent = parent; 
         visit_times = 0;
@@ -150,6 +149,7 @@ namespace gomoku
     }
 
     //Search for the best move
+    namespace pujitha{
     int PureMonteCarloSearchTree::search(Board &s, float exploration_level) {
         // the first move is at the center of board
         if (s.isEmpty()) return (s.getHeight() * s.getWidth()) / 2;
@@ -198,7 +198,7 @@ namespace gomoku
             printf("Next Move: %d, Value: %f\n", return_move, max_visit_times);
         }
         return return_move;
-    }
+    }}
 
     void PureMonteCarloSearchTree::updateWithMove(int last_move) {
         if (last_move == Board::kPlayerEmpty) return;
@@ -211,5 +211,4 @@ namespace gomoku
             root = new MCTSTreeNode(nullptr, 1.0);
         }
     }
-}
 } // gomoku
