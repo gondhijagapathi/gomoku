@@ -124,7 +124,6 @@ namespace pujitha
         player_info += name;
         player_info += "\nColor: ";
         player_info += color_info;
-        player_info += std::to_string(search_tree.getComputeBudget());
         player_info += "\n\n";
         return player_info;
     }
