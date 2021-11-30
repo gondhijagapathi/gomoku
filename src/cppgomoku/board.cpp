@@ -171,12 +171,8 @@ namespace pujitha
         return false;
     }
 
-    //Returns the winner.
     int Board::checkBoardStatus() {
-        /** 
-         * If the game is plain sailing, i.e. the only operation is play stone and remove stone from board,
-         * then the last move will end the game, and only the last move can determine the winner.
-         */
+        
         if (mMoved.size() < 2 * mNumberToWin - 1) return kPlayerEmpty;
 
         int num_moved = static_cast<int>(mMoved.size());
