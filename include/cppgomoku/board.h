@@ -13,9 +13,9 @@ namespace pujitha {
     class Board
     {
     public:
-        const static int kPlayerWhite = 2;
-        const static int kPlayerBlack = 1;
-        const static int kPlayerEmpty = 0;
+        const static int kPlayerWhite = 1;
+        const static int kPlayerBlack = 0;
+        const static int kPlayerEmpty = 2;
         const static int kOutOfBoard = -2;
         const static char kBlackStone = 'B';
         const static char kWhiteStone = 'W';
